@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+int main( void )
 {
 
     int i = 0;
@@ -16,7 +16,6 @@ int main(void)
     for (i = 0; i < 100; i++) {
         printf("%s", cpf);
     }
-
 
 
 }
