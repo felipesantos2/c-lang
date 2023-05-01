@@ -22,8 +22,11 @@ int main(void)
         char letra;
     };
 
+
     // VARIAVEL DO TIPO STRUCT
     struct person pessoa;
+    
+    struct person pessoas[10];
 
     pessoa.sexo = 'M';
     pessoa.idade = 20;
