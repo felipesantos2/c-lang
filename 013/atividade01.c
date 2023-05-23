@@ -6,6 +6,6 @@ int main()
     float *pc = &c;
 
     printf("Endereoo de c: %x.\n", &c);
-
+    pc = pc +2;
     printf("Endereco para o qual pr aponta: %x.\n", pc);
 }
