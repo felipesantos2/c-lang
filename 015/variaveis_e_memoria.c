@@ -12,8 +12,9 @@ int main()
     printf("&a = %p, valor = %i\n", &a, a);
     printf("&b = %p, valor = %i\n", &b, b);
     printf("&c = %p, valor = %i\n", &c, c);
-    printf("\n\n\n");
 
+    printf("\n\n\n");
+    
     b = 20;
     c = a + b;
 
@@ -24,6 +25,6 @@ int main()
     // 6487580
     // 6487576
     // 6487572
-    
+
     return 0;
 }
