@@ -6,11 +6,13 @@
 
 // estrutura de uma pilha
 struct tpilha {
-    int dados[TAMANHO];
+    char dados[TAMANHO];
     int ini;
     int fim;
 };
+
 struct tpilha pilha;
+
 int op;
 
 void pilha_entrar();
@@ -39,17 +41,16 @@ int main()
         menu_mostrar();
 
         // passando mo valor para a variavel op
+
         scanf("%d", &op);
 
         if( op == 1 ) {
             pilha_entrar();
         }
 
-        if( op == 0 ) {
+        if( op == 2 ) {
             pilha_sair();
         }
-
-
     }
 
     return (0) ;
@@ -66,10 +67,10 @@ void pilha_mostrar() {
 
 void pilha_entrar() {
     if( pilha.fim == TAMANHO ) {
-        printf("\nA pilha está cheia");
+        printf("\nA pilha esta cheia\n");
         system("Pause");
     } else {
-        printf("\n Digite um elemento para o array que irá ser empilhado;");
+        printf("\n Digite um elemento para o array que ira ser empilhado:\n ");
         scanf("%i", &pilha.dados[pilha.fim]);
         pilha.fim++; 
     }
@@ -77,7 +78,7 @@ void pilha_entrar() {
 
 void pilha_sair() {
     if( pilha.ini == pilha.fim ) {
-        printf("\nnenhum valor pode ser removido, a pilha já está vazia\n");
+        printf("\nNenhum valor pode ser removido, a pilha já esta vazia\n", 160);
         system("pause");
     } else {
         pilha.dados[pilha.fim - 1] = 0;  
@@ -86,8 +87,8 @@ void pilha_sair() {
 }
 
 void menu_mostrar() {
-    printf("\n Escolha uma opção:\n");
-    printf("\n 1 - para empilhar\n");
-    printf("\n 2 - desempilhar\n");
-    printf("\n 0 - sair\n\n");
+    printf("\n ESCOLHA UMA OPCAO:\n");
+    printf("\n 1 -  EMPILHAR\n");
+    printf("\n 2 - DESEMPILHAR\n");
+    printf("\n 0 - SAIR\n\n");
 }
