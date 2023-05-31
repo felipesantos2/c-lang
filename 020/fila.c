@@ -3,7 +3,7 @@
 
 #define tamanho 5
 
-// declaração do tipo pilha
+// declaração do tipo fila
 typedef struct tipo_fila {
     int dados[tamanho];
     int ini;
@@ -17,20 +17,22 @@ tipo_fila fila;
 void entrar_fila() {
 
     if(fila.fim == tamanho)
-        printf("A fila esta cheia.") exit(0);
+        printf("A fila esta cheia.");
+        exit(0);
 
     if( fila.fim != tamanho ) {
         printf("\n\nDigite um valor para a fila: \n\n");
-        scanf("%d", &fila.dados[dados.fim]);
-        fila.dados++;
+        scanf("%d", &fila.dados[fila.fim]);
+        fila.fim++;
     }
 
 }
 
-void sair_pilha() {
+void sair_fila() {
     
     if( fila.ini == fila.fim ) 
-        printf("A fila esta vazia.") exit(0);
+        printf("A fila esta vazia.");
+        exit(0);
     
     if( fila.ini != fila.fim ) {
 
@@ -48,7 +50,7 @@ void sair_pilha() {
 // função principal
 void main() {
     int op  = 1;
-    pilha.ini =0;
-    pilha.topo = 0;
+    fila.ini =0;
+    fila.fim = 0;
 
 }
