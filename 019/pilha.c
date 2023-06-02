@@ -29,7 +29,8 @@ tipo_pilha pilha;
 
 // }
 
-void empilhar() {
+void empilhar() 
+{
 
     if ( pilha.topo == tamanho ) {
         printf("\nA pilha está cheia, volte outro dia!\n\n");
