@@ -1,26 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+ 
+int xi;
+int *ptr_xi;
+ 
 
-
-typedef struct NO{
-    int dado;
-    NO* prox;
-}NO;
-
-typedef struct PILHA{
-    NO* topo;
-} PILHA;
-
-PILHA *p;
-
-int foo(){
-    NO* ptr = p->topo;
-    int dado;
-    if(ptr != NULL){
-        p->topo = ptr->prox;
-        ptr->prox = NULL;
-        dado = ptr->dado;
-        free(ptr);
-        return dado;
-    }
+float xf;
+float *ptr_xf;
+ 
+int main() {
+       xi = 10;
+            ptr_xi = ξ
+            xi = 20;
+            return(0);
+            return(0);
 }
+
