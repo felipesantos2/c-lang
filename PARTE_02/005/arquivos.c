@@ -10,11 +10,8 @@ int erroCode;
 
 void createFolder()
 {
-    mkdir("C:\\Users\\Felipe\\Downloads\\Database\\02");
+    mkdir("C:\\Users\\Felipe\\Downloads\\Database\\0406");
 }
-
-
-
 
 void writeFile();
 
@@ -24,7 +21,7 @@ void main()
     createFolder();
 
     // criando e abrindo o arquivo
-    file = fopen("C:\\Users\\Felipe\\Downloads\\Database\\02\\index.txt", "w+");
+    file = fopen("C:\\Users\\Felipe\\Downloads\\Database\\0406\\database.sql", "w+");
 
     // pequenas validações
     if (file == NULL)
@@ -42,47 +39,26 @@ void main()
         printf("\nArquivo fechado com sucesso!\n");
 }
 
-
 void writeFile()
 {
-    
-    fputc('F', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
+    char caractere;
+    printf("\nDigite um caractere\n? ");
+    scanf("%c", &caractere);
 
-    fputc('e', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
+    while (caractere != 'f')
+    {
 
-    fputc('l', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
+        fputc(caractere, file);
+        erroCode = ferror(file);
 
-    fputc('i', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
+        if (erroCode != 0)
+            printf("\nOcorreu algum problema com nosso arquivo\n");
 
-    fputc('p', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
+        if (erroCode == 0)
+            printf("\nCaractere gravado com sucesso!");
 
-    fputc('e', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
+        printf("\nDigite outro caractere\n? ");
 
-    fputc('\t', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
-
-    fputc('P', file);
-    erroCode = ferror(file);
-    if (erroCode != 0)
-        printf("\nOcorreu algum problema com nosso arquivo\n");
+        scanf("%c", &caractere);
+    }
 }
