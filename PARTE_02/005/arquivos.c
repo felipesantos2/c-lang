@@ -5,11 +5,12 @@
 #include <string.h>
 
 FILE *file;
+
 int erroCode;
 
 void createFolder()
 {
-    mkdir("C:\\Users\\Felipe\\Downloads\\Database\\c");
+    mkdir("C:\\Users\\Felipe\\Downloads\\Database\\02");
 }
 
 
@@ -23,7 +24,7 @@ void main()
     createFolder();
 
     // criando e abrindo o arquivo
-    file = fopen("C:\\Users\\Felipe\\Downloads\\Database\\c\\index.txt", "w+");
+    file = fopen("C:\\Users\\Felipe\\Downloads\\Database\\02\\index.txt", "w+");
 
     // pequenas validações
     if (file == NULL)
