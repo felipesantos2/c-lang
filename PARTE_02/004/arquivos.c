@@ -13,8 +13,39 @@ void createFolder()
     mkdir("C:\\Users\\Felipe\\Downloads\\Database\\c");
 }
 
+
+
+
+void writeFile();
+
+void main()
+{
+    // criando a pasta -> c
+    createFolder();
+
+    // criando e aabrindo o arquivo
+    file = fopen("C:\\Users\\Felipe\\Downloads\\Database\\c\\index.txt", "w+");
+
+    // pequenas validações
+    if (file == NULL)
+        printf("Erro!\n\n");
+
+    if (file != NULL)
+        printf("\narquivo criado com sucesso!\n");
+
+    // escrevendo no arquivo
+    writeFile();
+
+    int result = fclose(file);
+
+    if (result == 0)
+        printf("\nArquivo fechado com sucesso!\n");
+}
+
+
 void writeFile()
 {
+    
     fputc('F', file);
     erroCode = ferror(file);
     if (erroCode != 0)
@@ -44,28 +75,14 @@ void writeFile()
     erroCode = ferror(file);
     if (erroCode != 0)
         printf("\nOcorreu algum problema com nosso arquivo\n");
-}
 
-void main()
-{
-    // criando a pasta -> c
-    createFolder();
+    fputc('\t', file);
+    erroCode = ferror(file);
+    if (erroCode != 0)
+        printf("\nOcorreu algum problema com nosso arquivo\n");
 
-    // criando e aabrindo o arquivo
-    file = fopen("C:\\Users\\Felipe\\Downloads\\Database\\c\\index.txt", "w+");
-
-    // pequenas validações
-    if (file == NULL)
-        printf("Erro!\n\n");
-
-    if (file != NULL)
-        printf("\narquivo criado com sucesso!\n");
-
-    // escrevendo no arquivo
-    writeFile();
-
-    int result = fclose(file);
-
-    if (result == 0)
-        printf("\nArquivo fechado com sucesso!\n");
+    fputc('P', file);
+    erroCode = ferror(file);
+    if (erroCode != 0)
+        printf("\nOcorreu algum problema com nosso arquivo\n");
 }
