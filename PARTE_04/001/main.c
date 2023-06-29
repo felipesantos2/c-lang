@@ -3,28 +3,12 @@
 #include <math.h>
 #include <string.h>
 
-// LISTA -> FILA PILHA
-
-#define tamanho 3
-
-void empilha( int elemento)
-{
-    if(pilha.topo == tamanho) {
-        printf("pilha cheia");
-    }
-
-}
+// p -> posição do pai
+// e = 2p + 1; 
+// d = 2p + 2;
 
 int main()
 {
 
-    typedef struct 
-    {
-        int dados[tamanho];
-        int topo;
-        int inicio;
-    } pilha;
-
-    empilha(10);
-    return 0;
+  
 }
