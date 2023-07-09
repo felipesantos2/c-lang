@@ -16,10 +16,11 @@ tipo_fila fila;
 
 void entrar_fila() {
 
-    if(fila.fim == tamanho)
+    if(fila.fim == tamanho) {
         printf("A fila esta cheia.");
         exit(0);
-
+    }
+    
     if( fila.fim != tamanho ) {
         printf("\n\nDigite um valor para a fila: \n\n");
         scanf("%d", &fila.dados[fila.fim]);
